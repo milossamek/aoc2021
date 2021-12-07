@@ -7,7 +7,7 @@ import com.milossamek.aoc2021.solutions.day4.model.GameBoard;
 
 
 class GiantSquidBingoCalculatorTest extends AbstractCalculatorTest<GameBoard> {
-    private GiantSquidBingoCalculator calculator = new GiantSquidBingoCalculator();
+    private final GiantSquidBingoCalculator calculator = new GiantSquidBingoCalculator();
 
     @Override
     public Calculator<GameBoard> getCalculator() {

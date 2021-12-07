@@ -23,7 +23,7 @@ public class SubmarineCommandCalculator extends ResourceLoader<SubmarineCommand>
                 case UP -> depth.addAndGet(-command.getMove());
             }
         });
-        return horizontal.get() * depth.get();
+        return (long) horizontal.get() * depth.get();
     }
 
     @Override

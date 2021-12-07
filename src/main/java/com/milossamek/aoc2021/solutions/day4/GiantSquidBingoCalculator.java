@@ -46,9 +46,7 @@ public class GiantSquidBingoCalculator extends ResourceLoader<GameBoard> impleme
         final List<String> linesList = lines.toList();
         gameBoard.setDrawnNumbers(Arrays.stream(linesList.get(0).split(",")).map(Integer::parseInt).toList());
         AtomicReference<Board> board = new AtomicReference<>(new Board());
-        linesList.stream().skip(1).forEach(line -> {
-            processBoardLines(gameBoard, board, line);
-        });
+        linesList.stream().skip(1).forEach(line -> processBoardLines(gameBoard, board, line));
         return Collections.singletonList(gameBoard);
     }
 
